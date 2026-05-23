@@ -10,7 +10,8 @@
     {
       "binding": "DB",
       "database_name": "cf_worker_waitlist_local_db",
-      "database_id": "bcbfb781-f592-4527-9c6c-f1d410bc7f63"
+      "database_id": "123",
+      "migrations_dir": "./src/server/db/migrations"
     }
   ],
   "env": {
@@ -24,7 +25,8 @@
         {
           "binding": "DB",
           "database_name": "cf_worker_waitlist_db",
-          "database_id": "bcbfb781-f592-4527-9c6c-f1d410bc7f63"
+          "database_id": "bcbfb781-f592-4527-9c6c-f1d410bc7f63",
+          "migrations_dir": "./src/server/db/migrations"
         }
       ]
     },

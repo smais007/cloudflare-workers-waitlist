@@ -18,7 +18,10 @@
     "dry-run:staging": "bun run build:client && wrangler deploy --dry-run --env staging",
     "dry-run:prod": "bun run build:client && wrangler deploy --dry-run --env production",
     "deploy:staging": "bun run build:client && wrangler deploy --env staging",
-    "deploy:prod": "bun run build:client && wrangler deploy --env production"
+    "deploy:prod": "bun run build:client && wrangler deploy --env production",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate:local": "wrangler d1 migrations apply cf_worker_waitlist_local_db --local ",
+    "db:migrate:staging": "wrangler d1 migrations apply cf_worker_waitlist_db --remote --env staging"
   },
   "dependencies": {
     "@astrojs/react": "^5.0.5",
@@ -31,6 +34,7 @@
     "astro": "^6.3.5",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "drizzle-orm": "^0.45.2",
     "hono": "^4.12.21",
     "jose": "^6.2.3",
     "prettier": "^3.8.3",
@@ -47,6 +51,7 @@
     "@types/react": "^19.2.15",
     "@types/react-dom": "^19.2.3",
     "concurrently": "^9.2.1",
+    "drizzle-kit": "^0.31.10",
     "eslint": "^10.4.0",
     "eslint-plugin-astro": "^1.7.0",
     "prettier-plugin-tailwindcss": "^0.8.0"
