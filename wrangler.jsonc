@@ -9,7 +9,9 @@
   "env": {
     "staging": {
       "vars": {
-        "ENVIRONMENT": "staging"
+        "ENVIRONMENT": "staging",
+        "POLICY_AUD": "1e99c4442f62635a9c12b0561087b29c2309ab2f537c235b881b2bd434e722d5",
+        "CF_ACCESS_DOMAIN": "https://smaisshawon5.cloudflareaccess.com"
       }
     },
     "production": {
