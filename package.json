@@ -7,14 +7,18 @@
   },
   "scripts": {
     "client": "astro dev",
-    "build": "astro build",
+    "build:client": "astro build",
     "preview": "astro preview",
     "astro": "astro",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "lint": "eslint 'src/**/*.{js,ts,tsx,astro}'",
     "worker": "wrangler dev",
-    "dev": "concurrently \"bun run client\" \"bun run worker\""
+    "dev": "concurrently \"bun run client\" \"bun run worker\"",
+    "dry-run:staging": "bun run build:client && wrangler deploy --dry-run --env staging",
+    "dry-run:prod": "bun run build:client && wrangler deploy --dry-run --env production",
+    "deploy:staging": "bun run build:client && wrangler deploy --env staging",
+    "deploy:prod": "bun run build:client && wrangler deploy --env production"
   },
   "dependencies": {
     "@astrojs/react": "^5.0.5",
