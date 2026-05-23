@@ -6,13 +6,27 @@
     "directory": "./dist",
     "bindings": "ASSETS"
   },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "cf_worker_waitlist_local_db",
+      "database_id": "bcbfb781-f592-4527-9c6c-f1d410bc7f63"
+    }
+  ],
   "env": {
     "staging": {
       "vars": {
         "ENVIRONMENT": "staging",
         "POLICY_AUD": "1e99c4442f62635a9c12b0561087b29c2309ab2f537c235b881b2bd434e722d5",
         "CF_ACCESS_DOMAIN": "https://smaisshawon5.cloudflareaccess.com"
-      }
+      },
+      "d1_databases": [
+        {
+          "binding": "DB",
+          "database_name": "cf_worker_waitlist_db",
+          "database_id": "bcbfb781-f592-4527-9c6c-f1d410bc7f63"
+        }
+      ]
     },
     "production": {
       "vars": {
