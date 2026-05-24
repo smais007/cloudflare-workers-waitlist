@@ -57,6 +57,7 @@
     "@types/react-dom": "^19.2.3",
     "concurrently": "^9.2.1",
     "drizzle-kit": "^0.31.10",
+    "drizzle-seed": "^0.3.1",
     "eslint": "^10.4.0",
     "eslint-plugin-astro": "^1.7.0",
     "prettier-plugin-tailwindcss": "^0.8.0"
